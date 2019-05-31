@@ -12,8 +12,7 @@
 		AD0E382422902D2A00E78E1A /* NormalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E382322902D2A00E78E1A /* NormalTableViewCell.m */; };
 		AD9EAFEA22914A33005C7FB6 /* icon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AD9EAFE922914A33005C7FB6 /* icon.bundle */; };
 		ADA2C06322882031009ED282 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA2C06222882031009ED282 /* AppDelegate.m */; };
-		ADA2C06622882031009ED282 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA2C06522882031009ED282 /* ViewController.m */; };
-		ADA2C06922882031009ED282 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADA2C06722882031009ED282 /* Main.storyboard */; };
+		ADA2C06622882031009ED282 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA2C06522882031009ED282 /* NewsViewController.m */; };
 		ADA2C06B22882031009ED282 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADA2C06A22882031009ED282 /* Assets.xcassets */; };
 		ADA2C06E22882031009ED282 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADA2C06C22882031009ED282 /* LaunchScreen.storyboard */; };
 		ADA2C07122882031009ED282 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA2C07022882031009ED282 /* main.m */; };
@@ -32,9 +31,8 @@
 		ADA2C05E22882031009ED282 /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA2C06122882031009ED282 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		ADA2C06222882031009ED282 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		ADA2C06422882031009ED282 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		ADA2C06522882031009ED282 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		ADA2C06822882031009ED282 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ADA2C06422882031009ED282 /* NewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
+		ADA2C06522882031009ED282 /* NewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 		ADA2C06A22882031009ED282 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADA2C06D22882031009ED282 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ADA2C06F22882031009ED282 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,6 +54,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		41F527C722A15FEB006DE48C /* NewsController */ = {
+			isa = PBXGroup;
+			children = (
+				AD0E382222902D2A00E78E1A /* NormalTableViewCell.h */,
+				AD0E382322902D2A00E78E1A /* NormalTableViewCell.m */,
+				41F527C022A0D919006DE48C /* DetailViewController.h */,
+				41F527C122A0D919006DE48C /* DetailViewController.m */,
+				41F527C322A12E83006DE48C /* DeleteCellView.h */,
+				41F527C422A12E83006DE48C /* DeleteCellView.m */,
+				ADA2C06422882031009ED282 /* NewsViewController.h */,
+				ADA2C06522882031009ED282 /* NewsViewController.m */,
+			);
+			path = NewsController;
+			sourceTree = "<group>";
+		};
 		ADA2C05522882031009ED282 = {
 			isa = PBXGroup;
 			children = (
@@ -75,12 +88,10 @@
 		ADA2C06022882031009ED282 /* SampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				41F527C722A15FEB006DE48C /* NewsController */,
 				AD9EAFE922914A33005C7FB6 /* icon.bundle */,
 				ADA2C06122882031009ED282 /* AppDelegate.h */,
 				ADA2C06222882031009ED282 /* AppDelegate.m */,
-				ADA2C06422882031009ED282 /* ViewController.h */,
-				ADA2C06522882031009ED282 /* ViewController.m */,
-				ADA2C06722882031009ED282 /* Main.storyboard */,
 				ADA2C06A22882031009ED282 /* Assets.xcassets */,
 				ADA2C06C22882031009ED282 /* LaunchScreen.storyboard */,
 				ADA2C06F22882031009ED282 /* Info.plist */,
@@ -89,12 +100,6 @@
 				ADA2C07C22886FF9009ED282 /* VideoViewController.m */,
 				ADA2C07E22887AAF009ED282 /* RecommendViewController.h */,
 				ADA2C07F22887AAF009ED282 /* RecommendViewController.m */,
-				AD0E382222902D2A00E78E1A /* NormalTableViewCell.h */,
-				AD0E382322902D2A00E78E1A /* NormalTableViewCell.m */,
-				41F527C022A0D919006DE48C /* DetailViewController.h */,
-				41F527C122A0D919006DE48C /* DetailViewController.m */,
-				41F527C322A12E83006DE48C /* DeleteCellView.h */,
-				41F527C422A12E83006DE48C /* DeleteCellView.m */,
 			);
 			path = SampleApp;
 			sourceTree = "<group>";
@@ -160,7 +165,6 @@
 				AD9EAFEA22914A33005C7FB6 /* icon.bundle in Resources */,
 				ADA2C06E22882031009ED282 /* LaunchScreen.storyboard in Resources */,
 				ADA2C06B22882031009ED282 /* Assets.xcassets in Resources */,
-				ADA2C06922882031009ED282 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,7 +175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADA2C06622882031009ED282 /* ViewController.m in Sources */,
+				ADA2C06622882031009ED282 /* NewsViewController.m in Sources */,
 				41F527C522A12E83006DE48C /* DeleteCellView.m in Sources */,
 				ADA2C08022887AAF009ED282 /* RecommendViewController.m in Sources */,
 				ADA2C07122882031009ED282 /* main.m in Sources */,
@@ -185,14 +189,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		ADA2C06722882031009ED282 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ADA2C06822882031009ED282 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		ADA2C06C22882031009ED282 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -252,7 +248,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -301,7 +297,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

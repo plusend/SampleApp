@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  NewsViewController.h
 //  SampleApp
 //
 //  Created by plusend on 2019/5/12.
@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+/**
+ 新闻
+ */
+@interface NewsViewController : UIViewController
 
 @end
-

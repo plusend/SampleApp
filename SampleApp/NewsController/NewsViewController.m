@@ -1,25 +1,26 @@
 //
-//  ViewController.m
+//  NewsViewController.m
 //  SampleApp
 //
 //  Created by plusend on 2019/5/12.
 //  Copyright © 2019 plusend. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "NewsViewController.h"
 #import "NormalTableViewCell.h"
 #import "DetailViewController.h"
 #import "DeleteCellView.h"
 
-@interface ViewController ()<UITableViewDataSource, UITableViewDelegate, NormalTableViewCellDelegate>
+@interface NewsViewController ()<UITableViewDataSource, UITableViewDelegate, NormalTableViewCellDelegate>
 @property (nonatomic, strong, readwrite) UITableView *tableView;
 @property (nonatomic, strong, readwrite) NSMutableArray *dataArray;
 @end
 
-@implementation ViewController
+@implementation NewsViewController
 
-- (instancetype)init
-{
+#pragma mark life cycle
+
+- (instancetype)init {
     self = [super init];
     if (self) {
         _dataArray = @[].mutableCopy;
@@ -30,8 +31,7 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
 
@@ -42,26 +42,24 @@
     [self.view addSubview:_tableView];
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+#pragma mark - UITableViewDelegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 100;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     DetailViewController *controller = [[DetailViewController alloc]init];
     controller.title = [NSString stringWithFormat:@"%@", @(indexPath.row)];
     controller.view.backgroundColor = [UIColor whiteColor];
     [self.navigationController pushViewController:controller animated:YES];
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return _dataArray.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NormalTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"id"];
     if (!cell) {
         cell = [[NormalTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"id"];
@@ -72,14 +70,12 @@
     return cell;
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-- (void)tableViewCell:(UITableViewCell *)tableViewCell clickDeleteButton:(UIButton *)deleteButton
-{
+- (void)tableViewCell:(UITableViewCell *)tableViewCell clickDeleteButton:(UIButton *)deleteButton {
     DeleteCellView *deleteView = [[DeleteCellView alloc] initWithFrame:self.view.bounds];
 
     CGRect rect = [tableViewCell convertRect:deleteButton.frame toView:nil];

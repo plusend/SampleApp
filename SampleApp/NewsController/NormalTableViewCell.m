@@ -23,8 +23,7 @@
 
 @implementation NormalTableViewCell
 
-- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(nullable NSString *)reuseIdentifier
-{
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(nullable NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         [self.contentView addSubview:({
@@ -80,15 +79,13 @@
     return self;
 }
 
-- (void)deleteButtonClick
-{
+- (void)deleteButtonClick {
     if (self.delegate && [self.delegate respondsToSelector:@selector(tableViewCell:clickDeleteButton:)]) {
         [self.delegate tableViewCell:self clickDeleteButton:self.deleteButton];
     }
 }
 
-- (void)layoutTableViewCell
-{
+- (void)layoutTableViewCell {
     self.titleLabel.text = @"geek time ios";
 
     self.sourceLabel.text = @"geek time";

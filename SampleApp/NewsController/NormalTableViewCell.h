@@ -14,8 +14,8 @@
 
 @interface NormalTableViewCell : UITableViewCell
 
-@property(nonatomic, weak, readwrite) id<NormalTableViewCellDelegate> delegate;
+@property (nonatomic, weak, readwrite) id<NormalTableViewCellDelegate> delegate;
 
-- (void) layoutTableViewCell;
+- (void)layoutTableViewCell;
 
 @end

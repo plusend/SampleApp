@@ -12,14 +12,13 @@
 
 @property (nonatomic, strong, readwrite) UIView *backgroundView;
 @property (nonatomic, strong, readwrite) UIButton *deleteButton;
-@property(nonatomic, copy, readwrite) dispatch_block_t deleteBlock;
+@property (nonatomic, copy, readwrite) dispatch_block_t deleteBlock;
 
 @end
 
 @implementation DeleteCellView
 
-- (instancetype)initWithFrame:(CGRect)frame
-{
+- (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
         [self addSubview:({
@@ -43,8 +42,7 @@
     return self;
 }
 
-- (void)showDeleteViewFromPoint:(CGPoint)point clickBlock:(dispatch_block_t)clickBlock
-{
+- (void)showDeleteViewFromPoint:(CGPoint)point clickBlock:(dispatch_block_t)clickBlock {
     _deleteButton.frame = CGRectMake(point.x, point.y, 0, 0);
     _deleteBlock = [clickBlock copy];
 
@@ -57,17 +55,15 @@
     }];
 }
 
-- (void)dismissDeleteView
-{
+- (void)dismissDeleteView {
     [self removeFromSuperview];
 }
 
-- (void)_clickButton
-{
+- (void)_clickButton {
     if (_deleteBlock) {
         _deleteBlock();
     }
-    
+
     [self removeFromSuperview];
 }
 
