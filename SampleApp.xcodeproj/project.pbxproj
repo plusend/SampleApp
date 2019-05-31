@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		41F527C222A0D919006DE48C /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F527C122A0D919006DE48C /* DetailViewController.m */; };
+		41F527C522A12E83006DE48C /* DeleteCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F527C422A12E83006DE48C /* DeleteCellView.m */; };
 		AD0E382422902D2A00E78E1A /* NormalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E382322902D2A00E78E1A /* NormalTableViewCell.m */; };
 		AD9EAFEA22914A33005C7FB6 /* icon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AD9EAFE922914A33005C7FB6 /* icon.bundle */; };
 		ADA2C06322882031009ED282 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA2C06222882031009ED282 /* AppDelegate.m */; };
@@ -23,6 +24,8 @@
 /* Begin PBXFileReference section */
 		41F527C022A0D919006DE48C /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		41F527C122A0D919006DE48C /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		41F527C322A12E83006DE48C /* DeleteCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeleteCellView.h; sourceTree = "<group>"; };
+		41F527C422A12E83006DE48C /* DeleteCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeleteCellView.m; sourceTree = "<group>"; };
 		AD0E382222902D2A00E78E1A /* NormalTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NormalTableViewCell.h; sourceTree = "<group>"; };
 		AD0E382322902D2A00E78E1A /* NormalTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NormalTableViewCell.m; sourceTree = "<group>"; };
 		AD9EAFE922914A33005C7FB6 /* icon.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = icon.bundle; sourceTree = "<group>"; };
@@ -90,6 +93,8 @@
 				AD0E382322902D2A00E78E1A /* NormalTableViewCell.m */,
 				41F527C022A0D919006DE48C /* DetailViewController.h */,
 				41F527C122A0D919006DE48C /* DetailViewController.m */,
+				41F527C322A12E83006DE48C /* DeleteCellView.h */,
+				41F527C422A12E83006DE48C /* DeleteCellView.m */,
 			);
 			path = SampleApp;
 			sourceTree = "<group>";
@@ -167,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADA2C06622882031009ED282 /* ViewController.m in Sources */,
+				41F527C522A12E83006DE48C /* DeleteCellView.m in Sources */,
 				ADA2C08022887AAF009ED282 /* RecommendViewController.m in Sources */,
 				ADA2C07122882031009ED282 /* main.m in Sources */,
 				ADA2C07D22886FF9009ED282 /* VideoViewController.m in Sources */,

@@ -8,7 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol NormalTableViewCellDelegate <NSObject>
+- (void)tableViewCell:(UITableViewCell *)tableViewCell clickDeleteButton:(UIButton *)deleteButton;
+@end
+
 @interface NormalTableViewCell : UITableViewCell
+
+@property(nonatomic, weak, readwrite) id<NormalTableViewCellDelegate> delegate;
 
 - (void) layoutTableViewCell;
 
