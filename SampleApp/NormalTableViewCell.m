@@ -94,7 +94,7 @@
     [self.timeLabel sizeToFit];
     self.timeLabel.frame = CGRectMake(self.commentLabel.frame.origin.x + self.commentLabel.frame.size.width + 15, self.timeLabel.frame.origin.y, self.timeLabel.frame.size.width, self.timeLabel.frame.size.height);
     
-    self.rightImageView.image = [UIImage imageNamed:@"icon.bundle/time"];
+    self.rightImageView.image = [UIImage imageNamed:@"icon.bundle/timg.jpeg"];
 }
 
 @end
